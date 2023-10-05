@@ -1,0 +1,5 @@
+.hypothesis/
+.pytest_cache/
+.vscode/
+poetry.lock
+**/__pycache__/
