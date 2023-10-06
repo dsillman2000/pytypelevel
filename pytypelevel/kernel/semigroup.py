@@ -1,48 +1,35 @@
 import abc
-import types
 from functools import reduce
 from itertools import repeat
-from typing import (
-    Annotated,
-    Callable,
-    Generic,
-    Iterable,
-    Optional,
-    Protocol,
-    SupportsInt,
-    Type,
-    TypeVar,
-)
+from typing import Annotated, Callable, Generic, Iterable, Optional, Type, TypeVar
 
 from annotated_types import Gt
 
-from pytypelevel.typeclasses import TypeclassMeta
-
 T = TypeVar('T')
 
-class Semigroup(Generic[T], TypeclassMeta):
-
-    @classmethod
-    @abc.abstractmethod
-    def combine(cls, a: T, b: T) -> T:
-        ...
-
-    @classmethod
-    def combine_n(cls, a: T, n: Annotated[int, Gt(0)]) -> T:
-        return reduce(cls.combine, repeat(a, (n - 1)), a)
+class Semigroup(Generic[T]):
     
-    @classmethod
-    def combine_all_option(cls, a_values: Iterable[T]) -> Optional[T]:
+    _combine: Callable[[T, T], T]
+
+    def __init__(self, combine: Callable[[T, T], T]):
+        self._combine = combine
+
+    def combine(self, t1: T, t2: T) -> T:
+        return self._combine(t1, t2)
+
+    def combine_n(self, a: T, n: Annotated[int, Gt(0)]) -> T:
+        return reduce(self._combine, repeat(a, (n - 1)), a)
+    
+    def combine_all_option(self, a_values: Iterable[T]) -> Optional[T]:
         try:
-            return reduce(cls.combine, a_values)
+            return reduce(self._combine, a_values)
         except TypeError:
             return None
         
-    @classmethod
-    def reverse(cls) -> "Type[Semigroup[T]]":
-        __combine = cls.combine
-        return Semigroup[T].instance(combine = lambda a, b: __combine(b, a))
+    def reverse(self) -> "Semigroup[T]":
+        __combine = self._combine
+        return Semigroup[T](combine = lambda a, b: __combine(b, a))
 
-def semigroup(__combine: Callable[[T, T], T]) -> Type[Semigroup[T]]:
-    
-    return Semigroup[T].instance(combine = __combine)
+    def intercalate(self, middle: T) -> "Semigroup[T]":
+        __combine = self._combine
+        return Semigroup[T](combine = lambda a, b: __combine(a, __combine(middle, b)))

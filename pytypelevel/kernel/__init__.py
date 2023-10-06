@@ -1,3 +1,3 @@
-from pytypelevel.kernel.semigroup import Semigroup, semigroup
+from pytypelevel.kernel.semigroup import Semigroup
 
-__all__ = ['Semigroup', 'semigroup']
+__all__ = ['Semigroup']
