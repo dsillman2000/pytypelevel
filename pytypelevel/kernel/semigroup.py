@@ -16,12 +16,12 @@ class Semigroup(Generic[T]):
     def combine(self, __t1: T, __t2: T) -> T:
         return self._combine(__t1, __t2)
 
-    def combine_n(self, a: T, n: Annotated[int, Gt(0)]) -> T:
-        return reduce(self._combine, repeat(a, (n - 1)), a)
+    def combine_n(self, __a: T, __n: Annotated[int, Gt(0)]) -> T:
+        return reduce(self._combine, repeat(__a, (__n - 1)), __a)
     
-    def combine_all_option(self, a_values: Iterable[T]) -> Optional[T]:
+    def combine_all_option(self, __a_values: Iterable[T]) -> Optional[T]:
         try:
-            return reduce(self._combine, a_values)
+            return reduce(self._combine, __a_values)
         except TypeError:
             return None
         
@@ -29,21 +29,21 @@ class Semigroup(Generic[T]):
         __combine = self._combine
         return Semigroup[T](lambda a, b: __combine(b, a))
 
-    def intercalate(self, middle: T) -> "Semigroup[T]":
+    def intercalate(self, __middle: T) -> "Semigroup[T]":
         __combine = self._combine
-        return Semigroup[T](lambda a, b: __combine(a, __combine(middle, b)))
+        return Semigroup[T](lambda a, b: __combine(a, __combine(__middle, b)))
 
     @overload
-    def maybe_combine(self, oa: Optional[T], ob: T) -> T: ...
+    def maybe_combine(self, __oa: Optional[T], __ob: T) -> T: ...
     @overload
-    def maybe_combine(self, oa: T, ob: Optional[T]) -> T: ...
+    def maybe_combine(self, __oa: T, __ob: Optional[T]) -> T: ...
 
-    def maybe_combine(self, oa, ob) -> T:
-        match oa, ob:
+    def maybe_combine(self, __oa, __ob) -> T:
+        match __oa, __ob:
             case None, None: raise TypeError()
-            case None, _: return ob
-            case _, None: return oa
-            case _: return self.combine(oa, ob)
+            case None, _: return __ob
+            case _, None: return __oa
+            case _: return self.combine(__oa, __ob)
 
     @classmethod
     def first(cls) -> "Semigroup[T]":
