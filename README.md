@@ -4,7 +4,7 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 # Overview
 
-![Cats Map](docs/cats-map-inverted.png)
+![Cats Map Iceberg](docs/cats-map-iceberg.png)
 
 What's currently implemented:
 
