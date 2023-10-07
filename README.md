@@ -4,6 +4,10 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 # Overview
 
+![Cats Map](docs/cats-map-inverted.png)
+
+What's currently implemented:
+
 <details>
 
 <summary><b>Eq</b></summary>
@@ -33,6 +37,8 @@ src: [pytypelevel.kernel.semigroup](pytypelevel/kernel/semigroup.py)
 Docs forthcoming.
 
 </details>
+
+<br />
 
 # Acknowledgements
 
