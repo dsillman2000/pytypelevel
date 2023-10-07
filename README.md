@@ -18,6 +18,20 @@ Docs forthcoming.
 
 </details>
 
+<details>
+
+<summary>
+
+**Monoid**
+
+</summary>
+
+src: [pytypelevel.kernel.monoid](pytypelevel/kernel/monoid.py)
+
+Docs forthcoming.
+
+</details>
+
 # Acknowledgements
 
 Author(s):
