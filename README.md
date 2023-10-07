@@ -30,6 +30,16 @@ Docs forthcoming.
 
 <details>
 
+<summary><b>PartialOrder</b></summary>
+
+src: [pytypelevel.kernel.partial_order](pytypelevel/kernel/partial_order.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Semigroup</b></summary>
 
 src: [pytypelevel.kernel.semigroup](pytypelevel/kernel/semigroup.py)
