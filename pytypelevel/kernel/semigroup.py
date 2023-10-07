@@ -2,10 +2,12 @@ from functools import reduce
 from itertools import repeat
 from typing import Annotated, Callable, Generic, Iterable, Optional, TypeVar, overload
 
+import attrs
 from annotated_types import Gt
 
 T = TypeVar('T')
 
+@attrs.define
 class Semigroup(Generic[T]):
     
     _combine: Callable[[T, T], T]

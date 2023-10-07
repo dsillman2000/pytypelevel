@@ -1,3 +1,3 @@
-from pytypelevel.kernel import Monoid, Semigroup
+from pytypelevel.kernel import Eq, Monoid, Semigroup
 
-__all__ = ['Semigroup', 'Monoid']
+__all__ = ['Semigroup', 'Monoid', 'Eq']

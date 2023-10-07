@@ -2,6 +2,7 @@ from functools import reduce
 from itertools import repeat
 from typing import Annotated, Callable, Generic, Iterable, TypeVar
 
+import attrs
 from annotated_types import Ge
 
 from pytypelevel.annotations import SupportsEq
@@ -9,6 +10,7 @@ from pytypelevel.kernel.semigroup import Semigroup
 
 T = TypeVar('T', bound=SupportsEq)
 
+@attrs.define(slots=True)
 class Monoid(Generic[T], Semigroup[T]):
 
     empty: T
