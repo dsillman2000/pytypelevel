@@ -1,7 +1,4 @@
 import operator
-from typing import Optional, Type
-
-import pytest
 
 from pytypelevel import Semigroup
 
@@ -13,6 +10,10 @@ def test_semigroup_instances__str_concat():
     assert str_concat.combine_n('ha', 3) == 'hahaha'
     assert str_concat.combine_all_option(['one', 'two', 'three']) == 'onetwothree'
     assert str_concat.combine_all_option([]) is None
+    assert Semigroup.first().combine('a', 'b') == 'a'
+    assert Semigroup.last().combine('a', 'b') == 'b'
+    assert Semigroup.last().reverse().combine('a', 'b') == \
+           Semigroup.first().combine('a', 'b') == 'a'
 
     rev_str_concat = str_concat.reverse()
     rev2_str_concat = rev_str_concat.reverse()
@@ -51,6 +52,10 @@ def test_semigroup_instances__int_sum():
     assert int_sum.combine_n(16, 4) == 64
     assert int_sum.combine_all_option([1, 2, 3, 4]) == 10
     assert int_sum.combine_all_option([]) is None
+    assert Semigroup.first().combine(1, 2) == 1
+    assert Semigroup.last().combine(2, 3) == 3
+    assert Semigroup.last().reverse().combine(3, 4) == \
+           Semigroup.first().combine(3, 4) == 3
 
     rev_int_sum = int_sum.reverse()
     rev2_int_sum = rev_int_sum.reverse()

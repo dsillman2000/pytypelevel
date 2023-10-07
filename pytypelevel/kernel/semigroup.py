@@ -44,3 +44,11 @@ class Semigroup(Generic[T]):
             case None, _: return ob
             case _, None: return oa
             case _: return self.combine(oa, ob)
+
+    @classmethod
+    def first(cls) -> "Semigroup[T]":
+        return Semigroup(lambda a, _: a)
+    
+    @classmethod
+    def last(cls) -> "Semigroup[T]":
+        return Semigroup(lambda _, b: b)
