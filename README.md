@@ -4,7 +4,7 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 # Overview
 
-![Cats Map](docs/cats-map-inverted.png)
+![Cats Map Iceberg](docs/cats-map-iceberg.png)
 
 What's currently implemented:
 
@@ -23,6 +23,16 @@ Docs forthcoming.
 <summary><b>Monoid</b></summary>
 
 src: [pytypelevel.kernel.monoid](pytypelevel/kernel/monoid.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
+<summary><b>PartialOrder</b></summary>
+
+src: [pytypelevel.kernel.partial_order](pytypelevel/kernel/partial_order.py)
 
 Docs forthcoming.
 
