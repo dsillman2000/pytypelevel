@@ -21,7 +21,10 @@ def test_semigroup_instances__str_concat():
 
     interc_spc_str = str_concat.intercalate(' ')
     assert interc_spc_str.combine('hello', 'world') == 'hello world'
-
+    assert interc_spc_str.maybe_combine(None, 'not none') == \
+           interc_spc_str.maybe_combine('not none', None) == \
+           interc_spc_str.maybe_combine('not', 'none') == 'not none'
+    
 def test_semigroup_instances__str_stripconcat():
 
     str_stripconcat = Semigroup(lambda s1, s2: s1.strip() + s2.strip())
@@ -37,6 +40,9 @@ def test_semigroup_instances__str_stripconcat():
     
     interc_hyp_str_stripconcat = str_stripconcat.intercalate('-')
     assert interc_hyp_str_stripconcat.combine('  hello ', 'world   ') == 'hello-world'
+    assert interc_hyp_str_stripconcat.maybe_combine(None, 'not-none') == \
+           interc_hyp_str_stripconcat.maybe_combine('not-none', None) == \
+           interc_hyp_str_stripconcat.maybe_combine('not', 'none') == 'not-none'
 
 def test_semigroup_instances__int_sum():
 
@@ -53,3 +59,7 @@ def test_semigroup_instances__int_sum():
 
     interc_1_int_sum = int_sum.intercalate(1)
     assert interc_1_int_sum.combine(1, 7) == 9
+
+    assert interc_1_int_sum.maybe_combine(None, 2) == \
+           interc_1_int_sum.maybe_combine(2, None) == \
+           interc_1_int_sum.maybe_combine(1, 0) == 2 
