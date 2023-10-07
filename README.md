@@ -6,11 +6,7 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 <details>
 
-<summary>
-
-**Semigroup**
-
-</summary>
+<summary><b>Semigroup</b></summary>
 
 src: [pytypelevel.kernel.semigroup](pytypelevel/kernel/semigroup.py)
 
@@ -20,11 +16,7 @@ Docs forthcoming.
 
 <details>
 
-<summary>
-
-**Monoid**
-
-</summary>
+<summary><b>Monoid</b></summary>
 
 src: [pytypelevel.kernel.monoid](pytypelevel/kernel/monoid.py)
 
