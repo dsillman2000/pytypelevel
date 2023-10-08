@@ -9,7 +9,8 @@ from pytypelevel.kernel import (
     Order,
     PartialOrder,
     Semigroup,
+    Semilattice,
 )
 
 __all__ = [ 'Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order', 
-            'CommutativeMonoid', 'Group' ]
+            'CommutativeMonoid', 'Group', 'Semilattice' ]

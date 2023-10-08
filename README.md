@@ -40,6 +40,18 @@ Docs forthcoming.
 
 <details>
 
+<details>
+
+<summary><b>Group</b></summary>
+
+src: [pytypelevel.kernel.group](pytypelevel/kernel/group.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Hash</b></summary>
 
 src: [pytypelevel.kernel.hash](pytypelevel/kernel/hash.py)
@@ -87,6 +99,18 @@ src: [pytypelevel.kernel.semigroup](pytypelevel/kernel/semigroup.py)
 Docs forthcoming.
 
 </details>
+
+<details>
+
+<summary><b>Semilattice</b></summary>
+
+src: [pytypelevel.kernel.semilattice](pytypelevel/kernel/semilattice.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
 
 <br />
 

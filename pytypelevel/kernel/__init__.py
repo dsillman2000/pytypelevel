@@ -8,6 +8,7 @@ from pytypelevel.kernel.monoid import Monoid
 from pytypelevel.kernel.order import Order
 from pytypelevel.kernel.partial_order import PartialOrder
 from pytypelevel.kernel.semigroup import Semigroup
+from pytypelevel.kernel.semilattice import Semilattice
 
 __all__ = [ 'Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order', 
-            'CommutativeMonoid', 'Group' ]
+            'CommutativeMonoid', 'Group', 'Semilattice' ]

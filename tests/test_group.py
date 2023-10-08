@@ -1,9 +1,4 @@
-import itertools
-import operator
-
 from pytypelevel import Group
-
-from .conftest import Pair
 
 
 def test_group_instances__strdigits():
