@@ -20,6 +20,36 @@ Docs forthcoming.
 
 <details>
 
+<details>
+
+<summary><b>BoundedSemilattice</b></summary>
+
+src: [pytypelevel.kernel.bounded_semilattice](pytypelevel/kernel/bounded_semilattice.py)
+
+Docs forthcoming.
+
+</details>
+
+<summary><b>CommutativeGroup</b></summary>
+
+src: [pytypelevel.kernel.commutative_group](pytypelevel/kernel/commutative_group.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
+<summary><b>CommutativeMonoid</b></summary>
+
+src: [pytypelevel.kernel.commutative_monoid](pytypelevel/kernel/commutative_monoid.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>CommutativeSemigroup</b></summary>
 
 src: [pytypelevel.kernel.commutative_semigroup](pytypelevel/kernel/commutative_semigroup.py)
