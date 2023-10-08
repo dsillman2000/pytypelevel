@@ -22,8 +22,6 @@ Docs forthcoming.
 
 <details>
 
-<details>
-
 <summary><b>BoundedSemilattice</b></summary>
 
 src: [pytypelevel.kernel.bounded_semilattice](pytypelevel/kernel/bounded_semilattice.py)
@@ -31,6 +29,8 @@ src: [pytypelevel.kernel.bounded_semilattice](pytypelevel/kernel/bounded_semilat
 Docs forthcoming.
 
 </details>
+
+<details>
 
 <summary><b>CommutativeGroup</b></summary>
 
@@ -69,8 +69,6 @@ src: [pytypelevel.kernel.eq](pytypelevel/kernel/eq.py)
 Docs forthcoming.
 
 </details>
-
-<details>
 
 <details>
 
@@ -141,8 +139,6 @@ src: [pytypelevel.kernel.semilattice](pytypelevel/kernel/semilattice.py)
 Docs forthcoming.
 
 </details>
-
-<details>
 
 <br />
 
