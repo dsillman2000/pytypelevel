@@ -4,8 +4,9 @@ from pytypelevel.kernel import (
     Eq,
     Hash,
     Monoid,
+    Order,
     PartialOrder,
     Semigroup,
 )
 
-__all__ = ['Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup']
+__all__ = ['Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order']

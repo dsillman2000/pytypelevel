@@ -60,6 +60,16 @@ Docs forthcoming.
 
 <details>
 
+<summary><b>Order</b></summary>
+
+src: [pytypelevel.kernel.order](pytypelevel/kernel/order.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>PartialOrder</b></summary>
 
 src: [pytypelevel.kernel.partial_order](pytypelevel/kernel/partial_order.py)

@@ -21,14 +21,10 @@ Cats partial comparison truth table:
 def _partial_cmp_from_le(__le: Callable[[T, T], bool]) -> Callable[[T, T], float]:
     def _pcmp(__a: T, __b: T):
         match __le(__a, __b), __le(__b, __a):
-            case True, True:
-                return 0.0
-            case False, False:
-                return float('nan')
-            case True, False:
-                return -1.0
-            case _:
-                return 1.0
+            case True, True: return 0.0
+            case False, False: return float('nan')
+            case True, False: return -1.0
+            case _: return 1.0
     return _pcmp
 
 class PartialOrder(Generic[T], Eq[T]):
