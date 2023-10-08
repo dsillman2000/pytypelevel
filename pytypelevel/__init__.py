@@ -1,5 +1,6 @@
 from pytypelevel.kernel import (
     Band,
+    BoundedSemilattice,
     CommutativeGroup,
     CommutativeMonoid,
     CommutativeSemigroup,
@@ -14,4 +15,4 @@ from pytypelevel.kernel import (
 )
 
 __all__ = [ 'Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order', 
-            'CommutativeMonoid', 'Group', 'Semilattice', 'CommutativeGroup' ]
+            'CommutativeMonoid', 'Group', 'Semilattice', 'CommutativeGroup', 'BoundedSemilattice' ]
