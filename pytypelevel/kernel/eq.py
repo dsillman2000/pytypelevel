@@ -1,8 +1,6 @@
 import operator
 from typing import Callable, Generic, TypeVar
 
-import attrs
-
 from pytypelevel.annotations import SupportsEq
 
 T = TypeVar('T')

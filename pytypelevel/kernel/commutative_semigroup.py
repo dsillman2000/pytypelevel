@@ -1,7 +1,6 @@
 import types
 from typing import Annotated, Generic, TypeVar
 
-import attrs
 from annotated_types import Gt
 
 from pytypelevel.kernel.semigroup import Semigroup

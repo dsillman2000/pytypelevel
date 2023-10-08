@@ -1,6 +1,5 @@
 from typing import Annotated, Callable, Generic, TypeVar
 
-import attrs
 from annotated_types import Gt
 
 from pytypelevel.annotations import SupportsEq

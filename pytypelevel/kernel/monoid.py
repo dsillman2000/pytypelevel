@@ -2,7 +2,6 @@ from functools import reduce
 from itertools import repeat
 from typing import Annotated, Callable, Generic, Iterable, TypeVar
 
-import attrs
 from annotated_types import Ge
 
 from pytypelevel.annotations import SupportsEq
