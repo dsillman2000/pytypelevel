@@ -10,6 +10,16 @@ What's currently implemented:
 
 <details>
 
+<summary><b>Band</b></summary>
+
+src: [pytypelevel.kernel.band](pytypelevel/kernel/band.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Eq</b></summary>
 
 src: [pytypelevel.kernel.eq](pytypelevel/kernel/eq.py)
