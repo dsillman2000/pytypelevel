@@ -8,7 +8,7 @@ from pytypelevel.annotations import SupportsEq
 T = TypeVar('T')
 U = TypeVar('U')
 
-@attrs.define(slots=True)
+
 class Eq(Generic[T]):
 
     _eqv: Callable[[T, T], bool]

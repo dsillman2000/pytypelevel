@@ -1,3 +1,11 @@
-from pytypelevel.kernel import Eq, Hash, Monoid, PartialOrder, Semigroup
+from pytypelevel.kernel import (
+    Band,
+    CommutativeSemigroup,
+    Eq,
+    Hash,
+    Monoid,
+    PartialOrder,
+    Semigroup,
+)
 
-__all__ = ['Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash']
+__all__ = ['Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup']

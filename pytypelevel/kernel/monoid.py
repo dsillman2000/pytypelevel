@@ -10,7 +10,7 @@ from pytypelevel.kernel.semigroup import Semigroup
 
 T = TypeVar('T', bound=SupportsEq)
 
-@attrs.define(slots=True)
+
 class Monoid(Generic[T], Semigroup[T]):
 
     empty: T

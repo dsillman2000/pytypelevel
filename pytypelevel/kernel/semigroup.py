@@ -7,7 +7,6 @@ from annotated_types import Gt
 
 T = TypeVar('T')
 
-@attrs.define
 class Semigroup(Generic[T]):
     
     _combine: Callable[[T, T], T]

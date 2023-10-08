@@ -1,9 +1,12 @@
 from typing import Callable, Generic, TypeVar
 
+import attrs
+
 from pytypelevel.kernel.eq import Eq
 
 T = TypeVar('T')
 U = TypeVar('U')
+
 
 class Hash(Generic[T], Eq[T]):
 

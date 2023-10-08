@@ -33,7 +33,6 @@ def _partial_cmp_from_le(__le: Callable[[T, T], bool]) -> Callable[[T, T], float
                 return 1.0
     return _pcmp
 
-@attrs.define(slots=True)
 class PartialOrder(Generic[T], Eq[T]):
 
     _partial_cmp: Callable[[T, T], float]
