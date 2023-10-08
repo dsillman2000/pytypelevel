@@ -8,6 +8,8 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 What's currently implemented:
 
+### Kernel
+
 <details>
 
 <summary><b>Band</b></summary>
