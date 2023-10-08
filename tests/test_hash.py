@@ -12,3 +12,10 @@ def test_hash_instances__str():
 
     assert permutation.neqv('ample', 'good')
     assert permutation.eqv('sample', 'maples')
+
+def test_hash_instances__sqint():
+
+    sqint = Hash[int](lambda u: u * u)
+
+    assert sqint.eqv(32, -32)
+    assert sqint.neqv(31, 32)
