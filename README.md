@@ -20,6 +20,16 @@ Docs forthcoming.
 
 <details>
 
+<summary><b>Hash</b></summary>
+
+src: [pytypelevel.kernel.hash](pytypelevel/kernel/hash.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Monoid</b></summary>
 
 src: [pytypelevel.kernel.monoid](pytypelevel/kernel/monoid.py)
