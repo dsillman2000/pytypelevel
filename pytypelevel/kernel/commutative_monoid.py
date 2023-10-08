@@ -1,4 +1,4 @@
-from typing import Generic, Self, TypeVar
+from typing import Generic, TypeVar
 
 from pytypelevel.kernel.commutative_semigroup import CommutativeSemigroup
 from pytypelevel.kernel.monoid import Monoid

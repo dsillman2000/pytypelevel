@@ -3,6 +3,7 @@ from pytypelevel.kernel import (
     CommutativeMonoid,
     CommutativeSemigroup,
     Eq,
+    Group,
     Hash,
     Monoid,
     Order,
@@ -11,4 +12,4 @@ from pytypelevel.kernel import (
 )
 
 __all__ = [ 'Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order', 
-            'CommutativeMonoid' ]
+            'CommutativeMonoid', 'Group' ]
