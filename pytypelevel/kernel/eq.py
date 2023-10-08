@@ -30,7 +30,7 @@ class Eq(Generic[T]):
     def or_(self, __eq: "Eq[T]") -> "Eq[T]":
         return Eq[T](lambda a, b: self.eqv(a, b) or __eq.eqv(a, b))
     
-    @classmethod
-    def all_equal(cls) -> "Eq[T]":
+    @staticmethod
+    def all_equal() -> "Eq[T]":
         return Eq[T](lambda *_: True)
         

@@ -2,6 +2,8 @@ import operator
 
 from pytypelevel import Order
 
+from .conftest import Pair
+
 
 def test_order_instances__intord():
 
@@ -29,7 +31,6 @@ def test_order_instances__tupsize():
 
 def test_order_instances__pairs():
 
-    Pair = tuple[int, int]
     fstord: Order[Pair] = Order[Pair]().by(operator.itemgetter(0))
     sndord: Order[Pair] = Order[Pair]().by(operator.itemgetter(1))
     lexord = Order[Pair].when_equal(fstord, sndord)

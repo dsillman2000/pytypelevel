@@ -32,13 +32,13 @@ class Order(Generic[T], PartialOrder[T]):
         super().__init__(__cmp)
         self._cmp = __cmp
 
-    @classmethod
-    def from_lt(cls, __lt: Callable[[T, T], bool] = operator.lt) -> "Order[T]": # type: ignore
-        return cls(_cmp_from_lt(__lt))
+    @staticmethod
+    def from_lt(__lt: Callable[[T, T], bool] = operator.lt) -> "Order[T]": # type: ignore
+        return Order[T](_cmp_from_lt(__lt))
     
-    @classmethod
+    @staticmethod
     def from_le(cls, __le: Callable[[T, T], bool] = operator.le) -> "Order[T]": # type: ignore
-        return cls(_cmp_from_lt(__le))
+        return Order[T](_cmp_from_lt(__le))
 
     def compare(self, __a: T, __b: T) -> int:
         return self._cmp(__a, __b)
@@ -78,8 +78,8 @@ class Order(Generic[T], PartialOrder[T]):
         __cmp = self._cmp
         return Order[T](lambda a, b: __cmp(b, a))
     
-    @classmethod
-    def when_equal(cls, __first: "Order[T]", __second: "Order[T]") -> "Order[T]":
+    @staticmethod
+    def when_equal(__first: "Order[T]", __second: "Order[T]") -> "Order[T]":
         return Order[T](
             lambda a, b: __second._cmp(a, b) 
                 if (fr := __first._cmp(a, b)) == 0 
