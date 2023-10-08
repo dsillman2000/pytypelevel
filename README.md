@@ -20,6 +20,16 @@ Docs forthcoming.
 
 <details>
 
+<summary><b>CommutativeSemigroup</b></summary>
+
+src: [pytypelevel.kernel.commutative_semigroup](pytypelevel/kernel/commutative_semigroup.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Eq</b></summary>
 
 src: [pytypelevel.kernel.eq](pytypelevel/kernel/eq.py)
