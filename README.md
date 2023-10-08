@@ -8,11 +8,43 @@ Typeclasses in pure python. Based upon Scala's [Cats](https://typelevel.org/cats
 
 What's currently implemented:
 
+### Kernel
+
 <details>
 
 <summary><b>Band</b></summary>
 
 src: [pytypelevel.kernel.band](pytypelevel/kernel/band.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
+<details>
+
+<summary><b>BoundedSemilattice</b></summary>
+
+src: [pytypelevel.kernel.bounded_semilattice](pytypelevel/kernel/bounded_semilattice.py)
+
+Docs forthcoming.
+
+</details>
+
+<summary><b>CommutativeGroup</b></summary>
+
+src: [pytypelevel.kernel.commutative_group](pytypelevel/kernel/commutative_group.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
+<summary><b>CommutativeMonoid</b></summary>
+
+src: [pytypelevel.kernel.commutative_monoid](pytypelevel/kernel/commutative_monoid.py)
 
 Docs forthcoming.
 
@@ -33,6 +65,18 @@ Docs forthcoming.
 <summary><b>Eq</b></summary>
 
 src: [pytypelevel.kernel.eq](pytypelevel/kernel/eq.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
+<details>
+
+<summary><b>Group</b></summary>
+
+src: [pytypelevel.kernel.group](pytypelevel/kernel/group.py)
 
 Docs forthcoming.
 
@@ -87,6 +131,18 @@ src: [pytypelevel.kernel.semigroup](pytypelevel/kernel/semigroup.py)
 Docs forthcoming.
 
 </details>
+
+<details>
+
+<summary><b>Semilattice</b></summary>
+
+src: [pytypelevel.kernel.semilattice](pytypelevel/kernel/semilattice.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
 
 <br />
 
