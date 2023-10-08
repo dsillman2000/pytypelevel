@@ -1,7 +1,5 @@
 from typing import Callable, Generic, TypeVar
 
-import attrs
-
 from pytypelevel.kernel.eq import Eq
 
 T = TypeVar('T')

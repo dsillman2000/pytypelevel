@@ -1,8 +1,6 @@
 import operator
 from typing import Callable, Generic, Optional, TypeVar, overload
 
-import attrs
-
 from pytypelevel.kernel.eq import Eq
 
 T = TypeVar('T')

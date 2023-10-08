@@ -1,7 +1,6 @@
 import types
 from typing import Annotated, Generic, TypeVar
 
-import attrs
 from annotated_types import Gt
 
 from pytypelevel.kernel.semigroup import Semigroup
@@ -18,7 +17,7 @@ class CommutativeSemigroup(Generic[T], Semigroup[T]):
         # a + m + a ... = combine_n(a, n) + combine_n(middle, n - 1)
         _intercalated = super().intercalate(__middle)
         _commut = CommutativeSemigroup[T](_intercalated._combine)
-        def _interc_comb_n(__a: T, __n: Annotated[int, Gt(0)]) -> T:
+        def _interc_comb_n(_, __a: T, __n: Annotated[int, Gt(0)]) -> T:
             return self.combine(self.combine_n(__a, __n), self.combine_n(__middle, __n - 1))
         _commut.combine_n = types.MethodType(_interc_comb_n, _commut)
         return _commut
