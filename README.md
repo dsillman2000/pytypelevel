@@ -62,6 +62,16 @@ Docs forthcoming.
 
 <details>
 
+<summary><b>Enumerable</b></summary>
+
+src: [pytypelevel.kernel.enumerable](pytypelevel/kernel/enumerable.py)
+
+Docs forthcoming.
+
+</details>
+
+<details>
+
 <summary><b>Eq</b></summary>
 
 src: [pytypelevel.kernel.eq](pytypelevel/kernel/eq.py)

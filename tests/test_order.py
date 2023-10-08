@@ -39,3 +39,20 @@ def test_order_instances__pairs():
 
     lexord2 = Order[Pair].from_le(operator.le)
     assert lexord2.lt((1, 2), (2, 2)) and lexord2.lt((1, 2), (1, 12))
+
+
+def test_order_instances__bindigits():
+
+    bin_le = lambda s1, s2: s1.lstrip('0') <= s2.lstrip('0')
+    bin_len = lambda s1, s2: len(s1.lstrip('0')) <= len(s2.lstrip('0'))
+    bin_num1 = lambda s1, s2: s1.count('1') <= s2.count('1')
+
+    bin_ord = Order[str] \
+        .when_equal_monoid() \
+        .combine_all([
+            Order[str].from_le(bin_num1), 
+            Order[str].from_le(bin_len), 
+            Order[str].from_le(bin_le)
+        ])
+
+    assert bin_ord.eqv('1', '001') and bin_ord.lt('101', '1101')

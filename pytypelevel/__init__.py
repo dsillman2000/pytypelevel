@@ -1,5 +1,6 @@
 from pytypelevel.kernel import (
     Band,
+    BoundedEnumerable,
     BoundedSemilattice,
     CommutativeGroup,
     CommutativeMonoid,
@@ -12,7 +13,9 @@ from pytypelevel.kernel import (
     PartialOrder,
     Semigroup,
     Semilattice,
+    UnboundedEnumerable,
 )
 
 __all__ = [ 'Semigroup', 'Monoid', 'Eq', 'PartialOrder', 'Hash', 'Band', 'CommutativeSemigroup', 'Order', 
-            'CommutativeMonoid', 'Group', 'Semilattice', 'CommutativeGroup', 'BoundedSemilattice' ]
+            'CommutativeMonoid', 'Group', 'Semilattice', 'CommutativeGroup', 'BoundedSemilattice', 
+            'UnboundedEnumerable', 'BoundedEnumerable' ]

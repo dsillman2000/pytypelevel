@@ -1,6 +1,7 @@
 import operator
 from typing import Callable, Generic, TypeVar, cast
 
+from pytypelevel.kernel.monoid import Monoid
 from pytypelevel.kernel.partial_order import PartialOrder
 
 """
@@ -37,7 +38,7 @@ class Order(Generic[T], PartialOrder[T]):
         return Order[T](_cmp_from_lt(__lt))
     
     @staticmethod
-    def from_le(cls, __le: Callable[[T, T], bool] = operator.le) -> "Order[T]": # type: ignore
+    def from_le(__le: Callable[[T, T], bool] = operator.le) -> "Order[T]": # type: ignore
         return Order[T](_cmp_from_lt(__le))
 
     def compare(self, __a: T, __b: T) -> int:
@@ -85,3 +86,11 @@ class Order(Generic[T], PartialOrder[T]):
                 if (fr := __first._cmp(a, b)) == 0 
                 else fr
         )
+    
+    @staticmethod
+    def all_equal() -> "Order[T]":
+        return Order[T](lambda *_: 0)
+    
+    @staticmethod
+    def when_equal_monoid() -> "Monoid[Order[T]]":
+        return Monoid[Order[T]](Order[T].when_equal, Order[T].all_equal())
