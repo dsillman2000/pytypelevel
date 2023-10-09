@@ -18,4 +18,4 @@ def test_band_instances__maxagg():
     maxagg = Band[int](max)
 
     assert maxagg.combine(2, 4) == maxagg.combine(4, 4) == 4
-    assert maxagg.combine_n(20, 20) == 20
+    assert maxagg.combine_n(20, int(1e27)) == 20
