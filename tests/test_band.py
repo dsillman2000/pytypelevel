@@ -13,10 +13,9 @@ def test_band_instances__dictmerge():
     assert dictmerge.combine_n({'x': 3}, int(1e27)) == {'x': 3}
 
 
-def test_band_instances__idempotent_add():
+def test_band_instances__maxagg():
 
-    idempotent_add = Band[int](operator.add)
+    maxagg = Band[int](max)
 
-    assert idempotent_add.combine(7, 2) == 9
-    assert idempotent_add.combine(7, 7) == 7
-    assert idempotent_add.combine_all_option([1, 2, 3]) == 3
+    assert maxagg.combine(2, 4) == maxagg.combine(4, 4) == 4
+    assert maxagg.combine_n(20, int(1e27)) == 20
